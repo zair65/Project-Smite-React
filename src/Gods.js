@@ -1,9 +1,45 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Gods extends Component {
-    render() {
+    constructor()  { 
+     super(); 
+   
+   this.state = {
+    Gods:"", 
+    GodType="", 
+    Pantheon="",
+  };
+ }
+
+    handleGodChange = (event) => {
+        this.setState({ username: event.target.value });
+    }
+    handleGodTypeChange = (event) => {
+        this.setState({ email: event.target.value });
+    }
+    handlePasswordChange = (event) => {
+        this.setState({ password: event.target.value });
+    }
+
+
+  componentDidMount() {
+    axios.get(`http://localhost:3000/Smite/api/SmitePath/getGods`)
+      .then(res => {
+        const Gods = res.data;
+        this.setState({ Gods });
+        console.log(res.data);
+      })
+  }
+  
+  
+  render() {
     return (
-      <div className="God_info">
+      <div className="AllGods">  
+      <ul>
+        { this.state.Gods.map(God => <li>{God.name}</li>)}
+      </ul>
+           <div className="God_info">
           <h1>Gods</h1> 
           <table class="table GodTable">
     <thead>
@@ -35,7 +71,7 @@ class Gods extends Component {
     </tr>
   </tbody>
 </table>
-
+ </div>
    </div>
     );
 }
