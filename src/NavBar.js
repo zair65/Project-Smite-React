@@ -17,9 +17,6 @@ class NavBar extends Component {
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
           <N.Navbar inverse collapseOnSelect>
             <N.Navbar.Header>
-              <N.Navbar.Brand>
-                <a href="#" class="pull-left"><img src="/path/to/SmiteLogo.png"></img></a>
-              </N.Navbar.Brand>
               <N.Navbar.Toggle />
             </N.Navbar.Header>
             <N.Navbar.Collapse>

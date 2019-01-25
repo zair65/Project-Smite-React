@@ -77,9 +77,6 @@ input[type="password"], textarea {
   background-color :#2F1E27
 }
 
-.Nav {
-  background-color: #F16E10;
-}
 
 .Search{ 
    margin-bottom:-3vh;
@@ -165,6 +162,7 @@ body{
 }
 
 .container{
+
   top:200px;
 
 }
