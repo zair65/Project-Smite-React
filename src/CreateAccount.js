@@ -3,11 +3,11 @@ import Home from './Home.js';
 import axios from 'axios';
 import { Button} from 'reactstrap';
 
-class CreateAccount1 extends React.Component {
-  constructor(props) {
-    super(props);
+class CreateAccount extends React.Component {
+  constructor() {
+    super();
     this.state = {
-        Username: "",
+        UserName: "",
         Password: "",
         PasswordConf: "",
         Email: ""
@@ -15,16 +15,16 @@ class CreateAccount1 extends React.Component {
 
   }
 
-  handleUserNameChange(event) {
-    this.setState({Username: event.target.value});
+  handleUserNameChange = (event) => {
+    this.setState({UserName: event.target.value});
   }
-  handleEmailChange(event) {
+  handleEmailChange = (event) => {
     this.setState({Email: event.target.value});
   }
-  handlePasswordChange(event) {
+  handlePasswordChange = (event) => {
     this.setState({Password: event.target.value});
   }
-  handleConfPasswordChange(event) {
+  handleConfPasswordChange = (event) => {
     this.setState({PasswordConf: event.target.value});
   }
   
@@ -33,9 +33,9 @@ class CreateAccount1 extends React.Component {
 
             axios({
                 method: "post",
-                url: "http://localhost:8081/Smite/api/SmitePath/CreateAccount",
+                url: "http://localhost:8081/Smite/api/SmitePath/AddAccount",
                 data: {
-                    Username: this.state.Username,
+                    UserName: this.state.UserName,
                     Password: this.state.Password,
                     Email: this.state.Email
                 }
@@ -59,19 +59,19 @@ class CreateAccount1 extends React.Component {
   <form action="" id="join-us">
     <div class="fields">
       <span>
-       <input placeholder="Name" type="text" value={this.state.Username} onChange={this.handleUsernameChange} />
+       <input placeholder="Name" type="text" defaultValue={this.state.UserName} onChange={this.handleUserNameChange} />
     </span>
     <br />
      <span>
-       <input placeholder="Password" type="password" value={this.state.Password} onChange={this.handlePasswordChange} />
+       <input placeholder="Password" type="password" defaultValue={this.state.Password} onChange={this.handlePasswordChange} />
     </span>
     <br />
      <span>
-       <input placeholder="PasswordConf" type="password" value={this.state.PasswordConf} onChange={this.handleConfPasswordChange} />
+       <input placeholder="PasswordConf" type="password" defaultValue={this.state.PasswordConf} onChange={this.handleConfPasswordChange} />
     </span>
     <br />
      <span>
-       <input placeholder="Email" type="email" value={this.state.Email} onChange={this.handleEmailChange} />
+       <input placeholder="Email" type="email" defaultValue={this.state.Email} onChange={this.handleEmailChange} />
     </span>
     </div>
     <Button className="CreateAccButton" onClick={this.handleSign_In}>Create Account</Button>
@@ -82,4 +82,4 @@ class CreateAccount1 extends React.Component {
   }
 
 }
-export default CreateAccount1; 
+export default CreateAccount; 

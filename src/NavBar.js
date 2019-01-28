@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link, } from "react-router-dom";
 import Home from './Home';
 import NameForm from './Account_login.js';
 import Gods from './Gods.js';
-import CreateAccount1 from './CreateAccount.js';
+import CreateAccount from './CreateAccount.js';
 
 
 class NavBar extends Component {
@@ -54,7 +54,7 @@ class NavBar extends Component {
           <Route path="/Account_login" component={NameForm} />
           <Route exact path="/" component={Home} />
           <Route path="/Gods" component={Gods} />
-          <Route path="/CreateAccount" component={CreateAccount1} />
+          <Route path="/CreateAccount" component={CreateAccount} />
 
         </div>
       </Router>

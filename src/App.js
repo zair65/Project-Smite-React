@@ -5,7 +5,7 @@ import NavBar from './NavBar.js';
 import NameForm from './Account_login.js';
 import Home from './Home.js';
 import Gods from './Gods.js';
-import CreateAccount1 from './CreateAccount.js';
+import CreateAccount from './CreateAccount.js';
 import SmiteLogo from './SmiteLogo.png';
 
 class App extends Component {
