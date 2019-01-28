@@ -8,6 +8,10 @@
   text-align: center;
 } 
 
+
+.Logocontainer{ 
+  margin-top:-100vh;
+}
  
 .table { 
    width:70% !important;
@@ -62,10 +66,22 @@ td{
   
 }
 
-button{ 
+button.LogInButton{ 
   margin: 0 auto;  
-  margin-top:-5vh;
+  width:70%;
+  margin-top:5vh;
+  font: italic normal bold 30px/normal "Ariel", Helvetica, sans-serif;
+  background-color :rgb(197, 121, 21)
 }
+
+button.CreateAccButton{ 
+  margin: 0 auto;  
+  width:80%;
+  margin-top:5vh;
+  font: italic normal bold 20px/normal "Ariel", Helvetica, sans-serif;
+  background-color :rgb(197, 121, 21)
+}
+
 
 input[type="text"], textarea {
 
@@ -77,6 +93,11 @@ input[type="password"], textarea {
   background-color :#2F1E27
 }
 
+input[type="email"], textarea {
+
+  background-color:#2F1E27 
+
+}
 
 .Search{ 
    margin-bottom:-3vh;
@@ -96,7 +117,7 @@ input[type="password"], textarea {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  cursor: pointer;
+
   border: none;
   font: italic normal bold 60px/normal "Passero One", Helvetica, sans-serif;
   color: rgba(124,21,21,1);
@@ -112,17 +133,6 @@ input[type="password"], textarea {
   transform: rotateX(-0.2811266146deg) rotateY(-2.291831180523293deg)   ;
 }
 
-.enjoy-css:hover {
-  font: italic normal bold 72px/normal "Passero One", Helvetica, sans-serif;
-  color: rgba(124,24,24,1);
-  text-shadow: 0 1px 0 rgba(255,255,255,1) , 0 2px 0 rgba(255,255,255,1) , 0 3px 0 rgba(255,255,255,1) , 0 4px 0 rgba(255,255,255,1) , 0 5px 0 rgba(255,255,255,1) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 -5px 10px rgba(0,0,0,0.247059) , 0 -7px 10px rgba(0,0,0,0.2) , 0 -15px 20px rgba(0,0,0,0.14902) ;
-  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -webkit-transform: none;
-  transform: none;
-}
 
 .SubTitle {
   -webkit-box-sizing: content-box;
@@ -185,7 +195,7 @@ body{
   color:#9c450a; 
   text-align:center;
   font-size:1.2em;
-  margin-top:100px;
+  margin-top:60px;
   margin-bottom:10px;
 }
 

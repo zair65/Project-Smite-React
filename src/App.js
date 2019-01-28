@@ -5,6 +5,8 @@ import NavBar from './NavBar.js';
 import NameForm from './Account_login.js';
 import Home from './Home.js';
 import Gods from './Gods.js';
+import CreateAccount1 from './CreateAccount.js';
+import SmiteLogo from './SmiteLogo.png';
 
 class App extends Component {
   render() {
@@ -12,6 +14,9 @@ class App extends Component {
     <div className="App">
   
          <NavBar/> 
+         <div className="Logocontainer">
+          <img  src={SmiteLogo} alt="fireSpot"/>
+          </div>
           </div>
     );
   }

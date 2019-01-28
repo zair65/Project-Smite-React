@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from './Home.js';
+import { Button} from 'reactstrap';
 
 class NameForm extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class NameForm extends React.Component {
   <Home/>
 <div class="container">
   <h2>It's now or never</h2>
-  <h1>Come on , Join us!</h1>
+
   
   <form action="" id="join-us">
     <div class="fields">
@@ -40,9 +41,7 @@ class NameForm extends React.Component {
        <input placeholder="Password" type="password" />
     </span>
     </div>
-    <div class="submit">
-      <input class="submit" value="Sign In" type="button" />
-    </div>
+    <Button className="LogInButton" onClick={this.handleSign_In}>Log In</Button>
   </form>
 </div>
     </div>
