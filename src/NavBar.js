@@ -5,7 +5,9 @@ import Home from './Home';
 import NameForm from './Account_login.js';
 import Gods from './Gods.js';
 import CreateAccount from './CreateAccount.js';
-
+import DeleteAccount from './DeleteAccount.js';
+import UpdateAccount from './UpdateAccount.js';
+import Accounts from './Accounts.js';
 
 class NavBar extends Component {
 
@@ -31,10 +33,14 @@ class NavBar extends Component {
                 <N.NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">
                   <N.MenuItem eventKey={3.1} href="/Account_login">Log In
                   </N.MenuItem>
-                  <N.MenuItem eventKey={3.2} href="/CreateAccount">Sign In
+                  <N.MenuItem eventKey={3.2} href="/CreateAccount">Register Account
                   </N.MenuItem>
-                  <N.MenuItem eventKey={3.3}>Pantheons</N.MenuItem>
-                  <N.MenuItem eventKey={3.3}>Summary</N.MenuItem>
+                  <N.MenuItem eventKey={3.3} href="/DeleteAccount">Delete Account
+                  </N.MenuItem>
+                  <N.MenuItem eventKey={3.3} href="/UpdateAccount">Update Account
+                  </N.MenuItem>
+                   <N.MenuItem eventKey={3.4} href="/Accounts">Accounts
+                  </N.MenuItem>
                 </N.NavDropdown>
               </N.Nav>
               <N.Nav pullRight>
@@ -55,7 +61,9 @@ class NavBar extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/Gods" component={Gods} />
           <Route path="/CreateAccount" component={CreateAccount} />
-
+          <Route path="/DeleteAccount" component={DeleteAccount} />
+          <Route path="/UpdateAccount" component={UpdateAccount} />
+          <Route path="/Accounts" component={Accounts} />
         </div>
       </Router>
     );

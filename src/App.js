@@ -6,6 +6,9 @@ import NameForm from './Account_login.js';
 import Home from './Home.js';
 import Gods from './Gods.js';
 import CreateAccount from './CreateAccount.js';
+import DeleteAccount from './DeleteAccount.js';
+import UpdateAccount from './UpdateAccount.js';
+import Accounts from './Accounts.js';
 import SmiteLogo from './SmiteLogo.png';
 
 class App extends Component {

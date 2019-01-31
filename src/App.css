@@ -82,10 +82,26 @@ button.CreateAccButton{
   background-color :rgb(197, 121, 21)
 }
 
+button.DeleteAccButton{ 
+  margin: 0 auto;  
+  width:80%;
+  margin-top:5vh;
+  font: italic normal bold 20px/normal "Ariel", Helvetica, sans-serif;
+  background-color :firebrick;
+}
+
+button.UpdateAccButton{ 
+  margin: 0 auto;  
+  width:80%;
+  margin-top:5vh;
+  font: italic normal bold 20px/normal "Ariel", Helvetica, sans-serif;
+  background-color :green;
+}
+
 
 input[type="text"], textarea {
 
-  background-color:#2F1E27 
+  background-color:#2F1E27; 
 
 }
 input[type="password"], textarea {
