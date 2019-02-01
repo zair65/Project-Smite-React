@@ -37,10 +37,15 @@ class UpdateAccount extends React.Component {
             axios({
                 method: "put",
                 url: "http://localhost:8081/Smite/api/SmitePath/UpdateAccount/" + id,   
-        responseType: "json"
-        }).then(response => {
-          this.props.history.push('/Home');
-        })
+              data: { 
+                UserName:this.state.UserName1,
+               Password: this.state.Account.Password,
+                    Email: this.state.Account.Email }
+       
+                    });
+          
+          // this.props.history.push('/Home');
+   
        console.log("match2");
   }
 
@@ -60,6 +65,7 @@ class UpdateAccount extends React.Component {
                     this.setState({
                         Account:accounts[account]
                     });
+                    console.log(this.state.Account.id);
                     this.handleUpdate(this.state.Account.id);
                 }
 
@@ -101,7 +107,7 @@ class UpdateAccount extends React.Component {
        <input placeholder="Email" type="email" defaultValue={this.state.Email} onChange={this.handleEmailChange} />
     </span>
     </div>
-    <Button className="UpdateAccButton" onClick={this.handleUpdate}>Update Account</Button>
+    <Button className="UpdateAccButton" onClick={this.handleAllAccount}>Update Account</Button>
   </form>
 </div>
     </div>
