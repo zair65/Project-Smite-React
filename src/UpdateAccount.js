@@ -11,7 +11,9 @@ class UpdateAccount extends React.Component {
         UserName: "",
         Password: "",
         Email: "",
-        UserName1: "",
+        NewUserName: "",
+         NewPassword: "",
+         NewEmail1: "",
 
     };
 
@@ -21,8 +23,16 @@ class UpdateAccount extends React.Component {
     this.setState({UserName: event.target.value});
   }
 
- handleUserName1Change = (event) => {
-    this.setState({UserName1: event.target.value});
+ handleNewUserNameChange = (event) => {
+    this.setState({NewUserName: event.target.value});
+  }
+
+ handleNewpasswordChange = (event) => {
+    this.setState({NewPassword: event.target.value});
+  }
+
+  handleNewEmailChange = (event) => {
+    this.setState({NewEmail: event.target.value});
   }
 
   handleEmailChange = (event) => {
@@ -38,13 +48,13 @@ class UpdateAccount extends React.Component {
                 method: "put",
                 url: "http://localhost:8081/Smite/api/SmitePath/UpdateAccount/" + id,   
               data: { 
-                UserName:this.state.UserName1,
-               Password: this.state.Account.Password,
-                    Email: this.state.Account.Email }
+                UserName:this.state.NewUserName,
+               Password: this.state.NewPassword,
+                    Email: this.state.NewEmail }
        
                     });
           
-          // this.props.history.push('/Home');
+           this.props.history.push('/Home');
    
        console.log("match2");
   }
@@ -76,35 +86,38 @@ class UpdateAccount extends React.Component {
   }
 
 
-
-
-
-
   render () {
     
     return (
       <div className="Everything Account_login">
   <Home/>
 <div class="container">
-  <h2>It's now or never</h2>
-  <h1>Come on , Join the fun!</h1>
+  <h1>Enter new Details to update your account</h1>
   
   <form action="" id="join-us">
     <div class="fields">
       <span>
-       <input placeholder="Name" type="text" defaultValue={this.state.UserName} onChange={this.handleUserNameChange} />
+       <input placeholder="Enter UserName" type="text" defaultValue={this.state.UserName} onChange={this.handleUserNameChange} />
     </span>
     <br />
   <span>
-       <input placeholder="Name" type="text" defaultValue={this.state.UserName1} onChange={this.handleUserName1Change} />
+       <input placeholder="Enter new UserName" type="text" defaultValue={this.state.NewUserName} onChange={this.handleNewUserNameChange} />
     </span>
   <br />
      <span>
-       <input placeholder="Password" type="password" defaultValue={this.state.Password} onChange={this.handlePasswordChange} />
+       <input placeholder="Enter Password" type="password" defaultValue={this.state.Password} onChange={this.handlePasswordChange} />
+    </span>
+    <br />
+  <span>
+       <input placeholder="Enter new Password" type="text" defaultValue={this.state.NewPassword} onChange={this.handleNewPasswordChange} />
+    </span>
+  <br />
+     <span>
+       <input placeholder="Enter Email" type="email" defaultValue={this.state.Email} onChange={this.handleEmailChange} />
     </span>
     <br />
      <span>
-       <input placeholder="Email" type="email" defaultValue={this.state.Email} onChange={this.handleEmailChange} />
+       <input placeholder="Enter new Email" type="email" defaultValue={this.state.NewEmail} onChange={this.handleNewEmailChange} />
     </span>
     </div>
     <Button className="UpdateAccButton" onClick={this.handleAllAccount}>Update Account</Button>

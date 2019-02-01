@@ -53,7 +53,7 @@ class CreateAccount extends React.Component {
       <div className="Everything Account_login">
   <Home/>
 <div class="container">
-  <h2>It's now or never</h2>
+  <h2>It's now or never, Sign up!</h2>
   <h1>Come on , Join the fun!</h1>
   
   <form action="" id="join-us">
