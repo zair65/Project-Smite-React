@@ -32,19 +32,18 @@ class UpdateAccount extends React.Component {
     this.setState({Password: event.target.value});
   }
   
-    handleUpdate = (id) => {
-    
+  handleUpdate = (id) => {
 
             axios({
                 method: "put",
-                url: "http://localhost:8081/Smite/api/SmitePath/UpdateAccount",
-                data: {
-                    UserName1: this.state.UserName,
-                  
-                }
-            });
-            this.props.history.push('/');
-    }
+                url: "http://localhost:8081/Smite/api/SmitePath/UpdateAccount/" + id,   
+        responseType: "json"
+        }).then(response => {
+          this.props.history.push('/Home');
+        })
+       console.log("match2");
+  }
+
    
    handleAllAccount = () => {
 
