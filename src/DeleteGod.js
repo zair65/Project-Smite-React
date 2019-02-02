@@ -6,10 +6,10 @@ import { Button} from 'reactstrap';
 class DeleteAccount extends React.Component {
   constructor() {
     super();
-  this.state = { Account: [], 
-                UserName :null,
-                Email:null,
-                Password:null
+  this.state = { Gods: [], 
+                God :null,
+                GodType:null,
+                Pantheon:null
 
 };
 
@@ -19,7 +19,7 @@ class DeleteAccount extends React.Component {
 
             axios({
                 method: "delete",
-                url: "http://localhost:8080/Smite/api/SmitePath/json/" + id,   
+                url: "http://localhost:8080/Smite/api/SmitePath/DeleteAccount/" + id,   
         responseType: "json"
         }).then(response => {
           this.props.history.push('/Home');
