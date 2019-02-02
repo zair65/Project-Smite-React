@@ -11,7 +11,7 @@ class Accounts extends Component {
     componentDidMount() {
         axios({
             method: "get",
-            url: "http://localhost:8081/Smite/api/SmitePath/getAllAccounts", 
+            url: "http://localhost:8080/Smite/api/SmitePath/getAllAccounts", 
             responseType: "json"
         }).then(response => {
           console.log(response);

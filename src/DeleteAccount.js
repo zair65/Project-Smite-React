@@ -19,7 +19,7 @@ class DeleteAccount extends React.Component {
 
             axios({
                 method: "delete",
-                url: "http://localhost:8081/Smite/api/SmitePath/json/" + id,   
+                url: "http://localhost:8080/Smite/api/SmitePath/json/" + id,   
         responseType: "json"
         }).then(response => {
           this.props.history.push('/Home');
@@ -32,7 +32,7 @@ handleAllAccount = () => {
 
             axios({
                 method: "get",
-                url: "http://localhost:8081/Smite/api/SmitePath/getAllAccounts",   
+                url: "http://localhost:8080/Smite/api/SmitePath/getAllAccounts",   
         responseType: "json"
         }).then(response => {
             console.log(response);

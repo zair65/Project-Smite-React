@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link, } from "react-router-dom";
 import Home from './Home';
 import NameForm from './Account_login.js';
 import Gods from './Gods.js';
+import CreateGod from './CreateGod.js';
 import CreateAccount from './CreateAccount.js';
 import DeleteAccount from './DeleteAccount.js';
 import UpdateAccount from './UpdateAccount.js';
@@ -25,11 +26,19 @@ class NavBar extends Component {
             </N.Navbar.Header>
             <N.Navbar.Collapse>
               <N.Nav>
-                <N.NavItem eventKey={2} title="Home" href="/">
+                <N.NavItem  title="Home" href="/">
                   Home
       </N.NavItem>
-                <N.NavItem eventKey={2} title="Gods" href="/Gods">Gods
-      </N.NavItem>
+      <N.NavDropdown eventKey={2} title="Gods" id="basic-nav-dropdown">
+                  <N.MenuItem eventKey={2.1} href="/CreateGod">Register God
+                  </N.MenuItem>
+                  <N.MenuItem eventKey={2.2} href="/DeleteGod">Delete God
+                  </N.MenuItem>
+                  <N.MenuItem eventKey={2.3} href="/UpdateGod">Update God
+                  </N.MenuItem>
+                   <N.MenuItem eventKey={2.4} href="/Gods">Gods
+                  </N.MenuItem>
+                </N.NavDropdown>
                 <N.NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">
                   <N.MenuItem eventKey={3.1} href="/Account_login">Log In
                   </N.MenuItem>
@@ -60,6 +69,7 @@ class NavBar extends Component {
           <Route path="/Account_login" component={NameForm} />
           <Route exact path="/" component={Home} />
           <Route path="/Gods" component={Gods} />
+          <Route path="/CreateGod" component={CreateGod} />
           <Route path="/CreateAccount" component={CreateAccount} />
           <Route path="/DeleteAccount" component={DeleteAccount} />
           <Route path="/UpdateAccount" component={UpdateAccount} />

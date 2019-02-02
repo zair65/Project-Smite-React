@@ -46,7 +46,7 @@ class UpdateAccount extends React.Component {
 
             axios({
                 method: "put",
-                url: "http://localhost:8081/Smite/api/SmitePath/UpdateAccount/" + id,   
+                url: "http://localhost:8080/Smite/api/SmitePath/UpdateAccount/" + id,   
               data: { 
                 UserName:this.state.NewUserName,
                Password: this.state.NewPassword,
@@ -64,7 +64,7 @@ class UpdateAccount extends React.Component {
 
             axios({
                 method: "get",
-                url: "http://localhost:8081/Smite/api/SmitePath/getAllAccounts",   
+                url: "http://localhost:8080/Smite/api/SmitePath/getAllAccounts",   
         responseType: "json"
         }).then(response => {
             console.log(response);
