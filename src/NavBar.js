@@ -5,6 +5,7 @@ import Home from './Home';
 import NameForm from './Account_login.js';
 import Gods from './Gods.js';
 import CreateGod from './CreateGod.js';
+import DeleteGod from './DeleteGod.js';
 import CreateAccount from './CreateAccount.js';
 import DeleteAccount from './DeleteAccount.js';
 import UpdateAccount from './UpdateAccount.js';
@@ -70,6 +71,7 @@ class NavBar extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/Gods" component={Gods} />
           <Route path="/CreateGod" component={CreateGod} />
+          <Route path="/DeleteGod" component={DeleteGod} />
           <Route path="/CreateAccount" component={CreateAccount} />
           <Route path="/DeleteAccount" component={DeleteAccount} />
           <Route path="/UpdateAccount" component={UpdateAccount} />

@@ -57,12 +57,12 @@ class CreateGod extends React.Component {
     </span>
     <br />
      <span>
-       <input placeholder="Pantheon" type="password" value={this.state.GodType} onChange={this.handleGodTypeChange} />
+       <input placeholder="GodType" type="email" value={this.state.Pantheon} onChange={this.handlePantheonChange} />
     </span>
     <br />
      <span>
-       <input placeholder="GodType" type="email" value={this.state.Pantheon} onChange={this.handlePantheonChange} />
-    </span>
+       <input placeholder="Pantheon" type="password" value={this.state.GodType} onChange={this.handleGodTypeChange} />
+    </span>  
     </div>
     <Button className="CreateAccButton" onClick={this.handleGod_Create}>Create God</Button>
   </form>
