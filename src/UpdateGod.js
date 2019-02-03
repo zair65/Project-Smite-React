@@ -117,10 +117,10 @@ class UpdateGod extends React.Component {
     </span>
     <br />
      <span>
-       <input placeholder="Enter new Email" type="email" defaultValue={this.state.NewEmail} onChange={this.handleNewEmailChange} />
+       <input placeholder="Enter new Pantheon" type="email" defaultValue={this.state.NewPantheon} onChange={this.handleNewPantheonChange} />
     </span>
     </div>
-    <Button className="UpdateAccButton" onClick={this.handleAllAccount}>Update Account</Button>
+    <Button className="UpdateAccButton" onClick={this.handleAllGods}>Update God</Button>
   </form>
 </div>
     </div>
@@ -128,4 +128,4 @@ class UpdateGod extends React.Component {
   }
 
 }
-export default UpdateAccount; 
+export default UpdateGod; 
