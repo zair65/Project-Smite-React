@@ -237,12 +237,12 @@ form{
 
 .fields{
   border-left:2px solid #9c450a;
-  margin-top:30px;
+  margin-top:20px;
      color:white;
 }
 
 .container span{
-    margin-bottom:30px; 
+    margin-bottom:10px; 
     display:inline-block;
 }
 

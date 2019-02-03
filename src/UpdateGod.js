@@ -92,7 +92,7 @@ class UpdateGod extends React.Component {
       <div className="Everything Account_login">
   <Home/>
 <div class="container">
-  <h1>Enter new Details to update your account</h1>
+  <h1>Enter new Details to update God</h1>
   
   <form action="" id="join-us">
     <div class="fields">
