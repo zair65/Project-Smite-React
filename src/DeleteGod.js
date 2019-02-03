@@ -3,7 +3,7 @@ import Home from './Home.js';
 import axios from 'axios';
 import { Button} from 'reactstrap';
 
-class DeleteAccount extends React.Component {
+class DeleteGod extends React.Component {
   constructor() {
     super();
   this.state = { Gods: [], 
@@ -19,7 +19,7 @@ class DeleteAccount extends React.Component {
 
             axios({
                 method: "delete",
-                url: "http://localhost:8080/Smite/api/SmitePath/DeleteAccount/" + id,   
+                url: "http://localhost:8080/Smite/api/SmitePath/DeleteGod/" + id,   
         responseType: "json"
         }).then(response => {
           this.props.history.push('/Home');
@@ -28,22 +28,22 @@ class DeleteAccount extends React.Component {
   }
 
 
-handleAllAccount = () => {
+handleAllGods = () => {
 
             axios({
                 method: "get",
-                url: "http://localhost:8080/Smite/api/SmitePath/getAllAccounts",   
+                url: "http://localhost:8080/Smite/api/SmitePath/getGods",   
         responseType: "json"
         }).then(response => {
             console.log(response);
-            let accounts = response.data;
-            for(let account=0; account<accounts.length; account++){
-                if(accounts[account].UserName === this.state.UserName && accounts[account].Password===this.state.Password && accounts[account].Email===this.state.Email){
+            let gods = response.data;
+            for(let god=0; god<gods.length; god++){
+                if(gods[god].God === this.state.God && gods[god].Pantheon===this.state.Pantheon && gods[god].GodType===this.state.GodType){
                     console.log("match");
                     this.setState({
-                        Account:accounts[account]
+                        Gods:gods[god]
                     });
-                    this.handleDelete(this.state.Account.id);
+                    this.handleDelete(this.state.Gods.id);
                 }
 
 
@@ -52,41 +52,38 @@ handleAllAccount = () => {
     
   }
 
-
- handleUserNameChange = (event) => {
-    this.setState({UserName: event.target.value});
+  handleGodChange = (event) => {
+    this.setState({God: event.target.value});
   }
-  handleEmailChange = (event) => {
-    this.setState({Email: event.target.value});
+  handleGodTypeChange = (event) => {
+    this.setState({GodType: event.target.value});
   }
-  handlePasswordChange = (event) => {
-    this.setState({Password: event.target.value});
+  handlePantheonChange = (event) => {
+    this.setState({Pantheon: event.target.value});
   }
-
-
   render () {
     
     return (
       <div className="Everything Account_login">
   <Home/>
 <div class="container">
-  <h1>Enter details to delete Account</h1>
+  <h1>Enter details to delete God</h1>
   
  <form action="" id="join-us">
     <div class="fields">
       <span>
-       <input placeholder="Name" type="text" defaultValue={this.state.UserName} onChange={this.handleUserNameChange} />
+       <input placeholder="God name" type="text" defaultValue={this.state.God} onChange={this.handleGodChange} />
     </span>
     <br />
      <span>
-       <input placeholder="Password" type="password" defaultValue={this.state.Password} onChange={this.handlePasswordChange} />
+       <input placeholder="God Type" type="text" defaultValue={this.state.GodType} onChange={this.handleGodTypeChange} />
     </span>
     <br />
      <span>
-       <input placeholder="Email" type="email" defaultValue={this.state.Email} onChange={this.handleEmailChange} />
+       <input placeholder="Pantheon" type="text" defaultValue={this.state.Pantheon} onChange={this.handlePantheonChange} />
     </span>
     </div>
-    <Button className="DeleteAccButton" onClick={this.handleAllAccount}>Delete Account</Button>
+    <Button className="DeleteAccButton" onClick={this.handleAllGods}>Delete God</Button>
   </form>
 </div>
     </div>
@@ -94,4 +91,4 @@ handleAllAccount = () => {
   }
 
 }
-export default DeleteAccount; 
+export default DeleteGod; 
