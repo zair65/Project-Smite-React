@@ -46,7 +46,7 @@ class UpdateAccount extends React.Component {
 
             axios({
                 method: "put",
-                url: "http://localhost:8080/Smite/api/SmitePath/UpdateAccount/" + id,   
+                url: "http://localhost:8081/Smite/api/SmitePath/UpdateAccount/" + id,   
               data: { 
                 UserName:this.state.NewUserName,
                Password: this.state.NewPassword,
@@ -64,7 +64,7 @@ class UpdateAccount extends React.Component {
 
             axios({
                 method: "get",
-                url: "http://localhost:8080/Smite/api/SmitePath/getAllAccounts",   
+                url: "http://localhost:8081/Smite/api/SmitePath/getAllAccounts",   
         responseType: "json"
         }).then(response => {
             console.log(response);
@@ -90,7 +90,15 @@ class UpdateAccount extends React.Component {
     
     return (
       <div className="Everything Account_login">
-  <Home/>
+  <div className="Everything Account_login">
+     <div className="SmiteTitle">
+<div class="enjoy-css">Smite</div>
+<link async href="/Account_login" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+            </div>
+      <div className="Subposition"> 
+            <div class="SubTitle">Battleground of the Gods</div>   
+             </div> 
+              </div>  
 <div class="container">
   <h1>Enter new Details to update your account</h1>
   
@@ -128,4 +136,5 @@ class UpdateAccount extends React.Component {
   }
 
 }
+ 
 export default UpdateAccount; 

@@ -11,7 +11,7 @@ class Gods extends Component {
     componentDidMount() {
         axios({
             method: "get",
-            url: "http://localhost:8080/Smite/api/SmitePath/getGods", 
+            url: "http://localhost:8081/Smite/api/SmitePath/getGods", 
             responseType: "json"
         }).then(response => {
           console.log(response);

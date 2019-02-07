@@ -25,8 +25,14 @@ class NameForm extends React.Component {
   render () {
     
     return (
-      <div className="Everything Account_login">
-  <Home/>
+  <div className="Everything Account_login">
+     <div className="SmiteTitle">
+<div class="enjoy-css">Smite</div>
+<link async href="/Account_login" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+            </div>
+      <div className="Subposition"> 
+            <div class="SubTitle">Battleground of the Gods</div>   
+             </div>   
 <div class="container">
   <h2>It's now or never</h2>
 

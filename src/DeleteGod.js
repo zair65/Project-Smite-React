@@ -19,7 +19,7 @@ class DeleteGod extends React.Component {
 
             axios({
                 method: "delete",
-                url: "http://localhost:8080/Smite/api/SmitePath/DeleteGod/" + id,   
+                url: "http://localhost:8081/Smite/api/SmitePath/DeleteGod/" + id,   
         responseType: "json"
         }).then(response => {
           this.props.history.push('/Home');
@@ -32,7 +32,7 @@ handleAllGods = () => {
 
             axios({
                 method: "get",
-                url: "http://localhost:8080/Smite/api/SmitePath/getGods",   
+                url: "http://localhost:8081/Smite/api/SmitePath/getGods",   
         responseType: "json"
         }).then(response => {
             console.log(response);
@@ -64,8 +64,14 @@ handleAllGods = () => {
   render () {
     
     return (
-      <div className="Everything Account_login">
-  <Home/>
+   <div className="Everything Account_login">
+     <div className="SmiteTitle">
+<div class="enjoy-css">Smite</div>
+<link async href="/Account_login" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+            </div>
+      <div className="Subposition"> 
+            <div class="SubTitle">Battleground of the Gods</div>   
+             </div>   
 <div class="container">
   <h1>Enter details to delete God</h1>
   

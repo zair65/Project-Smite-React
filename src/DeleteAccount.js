@@ -19,7 +19,7 @@ class DeleteAccount extends React.Component {
 
             axios({
                 method: "delete",
-                url: "http://localhost:8080/Smite/api/SmitePath/DeleteAccount/" + id,   
+                url: "http://localhost:8081/Smite/api/SmitePath/DeleteAccount/" + id,   
         responseType: "json"
         }).then(response => {
           this.props.history.push('/Home');
@@ -32,7 +32,7 @@ handleAllAccount = () => {
 
             axios({
                 method: "get",
-                url: "http://localhost:8080/Smite/api/SmitePath/getAllAccounts",   
+                url: "http://localhost:8081/Smite/api/SmitePath/getAllAccounts",   
         responseType: "json"
         }).then(response => {
             console.log(response);
@@ -68,7 +68,15 @@ handleAllAccount = () => {
     
     return (
       <div className="Everything Account_login">
-  <Home/>
+  <div className="Everything Account_login">
+     <div className="SmiteTitle">
+<div class="enjoy-css">Smite</div>
+<link async href="/Account_login" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+            </div>
+      <div className="Subposition"> 
+            <div class="SubTitle">Battleground of the Gods</div>   
+             </div> 
+              </div>  
 <div class="container">
   <h1>Enter details to delete Account</h1>
   

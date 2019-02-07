@@ -30,7 +30,7 @@ class CreateGod extends React.Component {
      
             axios({
                 method: "post",
-                url: "http://localhost:8080/Smite/api/SmitePath/AddGod",
+                url: "http://localhost:8081/Smite/api/SmitePath/AddGod",
                 data: {
                     God: this.state.God,
                     Pantheon: this.state.Pantheon,
@@ -44,8 +44,14 @@ class CreateGod extends React.Component {
   render () {
     
     return (
-      <div className="Everything Account_login">
-  <Home/>
+   <div className="Everything Account_login">
+     <div className="SmiteTitle">
+<div class="enjoy-css">Smite</div>
+<link async href="/Account_login" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+            </div>
+      <div className="Subposition"> 
+            <div class="SubTitle">Battleground of the Gods</div>   
+             </div>   
 <div class="container">
   <h2>It's now or never</h2>
   <h1>Come on , Join the fun!</h1>

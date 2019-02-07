@@ -28,7 +28,7 @@ class NavBar extends Component {
             </N.Navbar.Header>
             <N.Navbar.Collapse>
               <N.Nav>
-                <N.NavItem  title="Home" href="/">
+                <N.NavItem  title="Home" href="/Home">
                   Home
       </N.NavItem>
       <N.NavDropdown eventKey={2} title="Gods" id="basic-nav-dropdown">
@@ -69,7 +69,7 @@ class NavBar extends Component {
             </N.Navbar.Collapse>
           </N.Navbar>
           <Route path="/Account_login" component={NameForm} />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/Home" component={Home} />
           <Route path="/Gods" component={Gods} />
           <Route path="/CreateGod" component={CreateGod} />
           <Route path="/UpdateGod" component={UpdateGod} />

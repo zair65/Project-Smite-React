@@ -46,7 +46,7 @@ class UpdateGod extends React.Component {
 
             axios({
                 method: "put",
-                url: "http://localhost:8080/Smite/api/SmitePath/UpdateGod/" + id,   
+                url: "http://localhost:8081/Smite/api/SmitePath/UpdateGod/" + id,   
               data: { 
                 God:this.state.NewGod,
                Pantheon: this.state.NewPantheon,
@@ -64,7 +64,7 @@ class UpdateGod extends React.Component {
 
             axios({
                 method: "get",
-                url: "http://localhost:8080/Smite/api/SmitePath/getGods",   
+                url: "http://localhost:8081/Smite/api/SmitePath/getGods",   
         responseType: "json"
         }).then(response => {
             console.log(response);
@@ -89,8 +89,14 @@ class UpdateGod extends React.Component {
   render () {
     
     return (
-      <div className="Everything Account_login">
-  <Home/>
+   <div className="Everything Account_login">
+     <div className="SmiteTitle">
+<div class="enjoy-css">Smite</div>
+<link async href="/Account_login" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+            </div>
+      <div className="Subposition"> 
+            <div class="SubTitle">Battleground of the Gods</div>   
+             </div>   
 <div class="container">
   <h1>Enter new Details to update God</h1>
   

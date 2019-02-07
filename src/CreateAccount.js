@@ -33,7 +33,7 @@ class CreateAccount extends React.Component {
 
             axios({
                 method: "post",
-                url: "http://localhost:8080/Smite/api/SmitePath/AddAccount",
+                url: "http://localhost:8081/Smite/api/SmitePath/AddAccount",
                 data: {
                     UserName: this.state.UserName,
                     Password: this.state.Password,
@@ -51,7 +51,13 @@ class CreateAccount extends React.Component {
     
     return (
       <div className="Everything Account_login">
-  <Home/>
+     <div className="SmiteTitle">
+<div class="enjoy-css">Smite</div>
+<link async href="/Account_login" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+            </div>
+      <div className="Subposition"> 
+            <div class="SubTitle">Battleground of the Gods</div>   
+             </div>   
 <div class="container">
   <h2>It's now or never, Sign up!</h2>
   <h1>Come on , Join the fun!</h1>
